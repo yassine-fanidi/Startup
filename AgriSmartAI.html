@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AgriSmart AI - L'agriculture intelligente pour un Maroc durable
+    </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#2E7D32", secondary: "#81C784" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+      .testimonial-card {
+          transition: transform 0.3s ease;
+      }
+      .testimonial-card:hover {
+          transform: translateY(-5px);
+      }
+      .solution-card {
+          transition: all 0.3s ease;
+      }
+      .solution-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <a href="#" class="font-['Pacifico'] text-primary text-2xl"
+            >AgriSmart AI</a
+          >
+          <nav class="hidden md:flex ml-12">
+            <a
+              href="#solutions"
+              class="flex items-center mx-4 text-gray-700 hover:text-primary transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-apps-line"></i>
+              </div>
+              Solutions
+            </a>
+            <a
+              href="#avantages"
+              class="flex items-center mx-4 text-gray-700 hover:text-primary transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-award-line"></i>
+              </div>
+              Avantages
+            </a>
+            <a
+              href="#temoignages"
+              class="flex items-center mx-4 text-gray-700 hover:text-primary transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-message-3-line"></i>
+              </div>
+              Témoignages
+            </a>
+            <a
+              href="#contact"
+              class="flex items-center mx-4 text-gray-700 hover:text-primary transition-colors"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-contacts-line"></i>
+              </div>
+              Contact
+            </a>
+          </nav>
+        </div>
+        <div class="flex items-center">
+          <a
+            href="#"
+            class="text-gray-700 hover:text-primary transition-colors mr-6 hidden md:flex items-center"
+          >
+            <div class="w-5 h-5 flex items-center justify-center mr-2">
+              <i class="ri-login-circle-line"></i>
+            </div>
+            Connexion
+          </a>
+          <button
+            class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors"
+          >
+            S'inscrire
+          </button>
+          <div class="md:hidden ml-4 w-8 h-8 flex items-center justify-center">
+            <i class="ri-menu-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="w-full pt-24 relative"
+      style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20agricultural%20fields%20in%20Morocco%20with%20smart%20farming%20technology%2C%20drone%20view%20of%20green%20fields%20with%20irrigation%20systems%2C%20beautiful%20landscape%20with%20mountains%20in%20background%2C%20soft%20natural%20lighting%2C%20high%20resolution%20professional%20photography%2C%20ensure%20left%20side%20has%20smooth%20gradient%20for%20text%20placement&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center right;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"
+      ></div>
+      <div class="container mx-auto px-6 py-20 md:py-32 relative z-10 w-full">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            L'agriculture intelligente pour un Maroc durable
+          </h1>
+          <p class="text-lg md:text-xl text-gray-700 mb-8">
+            Nous combinons l'intelligence artificielle, l'analyse de données et
+            l'automatisation pour transformer l'agriculture marocaine et créer
+            un avenir plus productif et écologique.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors text-lg font-medium"
+            >
+              Commencer maintenant
+            </button>
+            <button
+              class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors text-lg font-medium flex items-center justify-center"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-play-circle-line"></i>
+              </div>
+              Voir la démo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Nos Solutions Innovantes
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Découvrez comment nos technologies de pointe peuvent transformer
+            votre exploitation agricole et améliorer votre rendement.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Solution 1 -->
+          <div
+            class="solution-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div
+              class="h-48"
+              style="background-image: url('https://readdy.ai/api/search-image?query=AI%20technology%20for%20agriculture%2C%20computer%20vision%20analyzing%20crop%20health%2C%20modern%20agricultural%20technology%20interface%20with%20plant%20analysis%2C%20clean%20minimal%20design%20with%20green%20elements&width=600&height=400&seq=2&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-brain-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Intelligence Artificielle pour l'agriculture
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Nos algorithmes d'IA analysent les conditions de vos cultures en
+                temps réel pour vous fournir des recommandations précises et
+                personnalisées.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                En savoir plus
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solution 2 -->
+          <div
+            class="solution-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div
+              class="h-48"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Agricultural%20data%20analysis%20dashboard%20with%20charts%20and%20graphs%2C%20farmer%20analyzing%20crop%20data%20on%20tablet%2C%20data%20visualization%20for%20farming%2C%20clean%20modern%20interface%20with%20statistics&width=600&height=400&seq=3&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-line-chart-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Analyse de données agricoles
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Transformez vos données en insights actionnables grâce à notre
+                plateforme d'analyse avancée qui vous aide à prendre des
+                décisions éclairées.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                En savoir plus
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solution 3 -->
+          <div
+            class="solution-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div
+              class="h-48"
+              style="background-image: url('https://readdy.ai/api/search-image?query=Agricultural%20automation%20system%20with%20smart%20irrigation%20and%20robotic%20equipment%20in%20Moroccan%20farm%2C%20modern%20farming%20technology%2C%20automated%20farming%20processes%2C%20clean%20professional%20photography&width=600&height=400&seq=4&orientation=landscape'); background-size: cover; background-position: center;"
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="ri-robot-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Automatisation des processus
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Réduisez votre charge de travail grâce à nos solutions
+                d'automatisation qui optimisent l'irrigation, la fertilisation
+                et la surveillance des cultures.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                En savoir plus
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section id="avantages" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Avantages pour les Agriculteurs
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Nos solutions intelligentes offrent de nombreux avantages concrets
+              pour votre exploitation agricole :
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-seedling-line text-primary ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    Augmentation de la productivité
+                  </h3>
+                  <p class="text-gray-600">
+                    Améliorez vos rendements jusqu'à 30% grâce à des décisions
+                    basées sur des données précises et des recommandations
+                    personnalisées.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-money-euro-circle-line text-primary ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    Réduction des coûts
+                  </h3>
+                  <p class="text-gray-600">
+                    Économisez sur les intrants agricoles grâce à une
+                    utilisation optimisée de l'eau, des engrais et des
+                    pesticides.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-earth-line text-primary ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    Agriculture durable
+                  </h3>
+                  <p class="text-gray-600">
+                    Contribuez à la préservation des ressources naturelles tout
+                    en améliorant la qualité de vos sols à long terme.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0"
+                >
+                  <i class="ri-time-line text-primary ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    Gain de temps
+                  </h3>
+                  <p class="text-gray-600">
+                    Automatisez les tâches répétitives et concentrez-vous sur
+                    les aspects stratégiques de votre exploitation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <div class="relative">
+              <div
+                class="absolute -top-4 -left-4 w-20 h-20 bg-primary/10 rounded-lg"
+              ></div>
+              <div
+                class="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/10 rounded-lg"
+              ></div>
+              <img
+                src="https://readdy.ai/api/search-image?query=Moroccan%20farmer%20using%20tablet%20in%20field%20to%20monitor%20smart%20farming%20technology%2C%20agricultural%20data%20visualization%2C%20modern%20farming%20in%20Morocco%2C%20professional%20photography%20with%20natural%20lighting&width=600&height=500&seq=5&orientation=portrait"
+                alt="Agriculteur utilisant AgriSmart AI"
+                class="rounded-lg shadow-lg relative z-10 w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages Section -->
+    <section id="temoignages" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Ce que disent nos agriculteurs
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Découvrez les expériences de ceux qui ont déjà transformé leur
+            exploitation avec AgriSmart AI.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Témoignage 1 -->
+          <div class="testimonial-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20Moroccan%20male%20farmer%2C%2045%20years%20old%2C%20weathered%20face%2C%20authentic%2C%20natural%20lighting%2C%20professional%20headshot&width=200&height=200&seq=6&orientation=squarish"
+                  alt="Hassan Benali"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Hassan Benali
+                </h3>
+                <p class="text-gray-500">Agriculteur à Meknès</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Depuis que j'utilise AgriSmart AI, ma consommation d'eau a
+              diminué de 25% et mes rendements ont augmenté. La plateforme est
+              intuitive et les recommandations sont vraiment adaptées à mon
+              exploitation."
+            </p>
+            <div class="flex mt-4">
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+            </div>
+          </div>
+
+          <!-- Témoignage 2 -->
+          <div class="testimonial-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20Moroccan%20female%20farmer%2C%2038%20years%20old%2C%20confident%20smile%2C%20authentic%2C%20natural%20lighting%2C%20professional%20headshot&width=200&height=200&seq=7&orientation=squarish"
+                  alt="Fatima Ouazzani"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Fatima Ouazzani
+                </h3>
+                <p class="text-gray-500">Agricultrice à Agadir</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Les analyses prédictives m'ont permis d'anticiper plusieurs
+              problèmes phytosanitaires avant qu'ils ne deviennent critiques. Je
+              recommande vivement AgriSmart AI à tous les agriculteurs qui
+              veulent moderniser leur exploitation."
+            </p>
+            <div class="flex mt-4">
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-half-fill text-yellow-400"></i>
+            </div>
+          </div>
+
+          <!-- Témoignage 3 -->
+          <div class="testimonial-card bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20older%20Moroccan%20male%20farmer%2C%2060%20years%20old%2C%20wise%20expression%2C%20authentic%2C%20natural%20lighting%2C%20professional%20headshot&width=200&height=200&seq=8&orientation=squarish"
+                  alt="Mohammed El Amrani"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Mohammed El Amrani
+                </h3>
+                <p class="text-gray-500">Agriculteur à Marrakech</p>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "J'étais sceptique au début, mais après une saison d'utilisation,
+              je suis convaincu. L'équipe d'AgriSmart AI m'a accompagné tout au
+              long du processus d'adoption et les résultats sont là : meilleure
+              qualité de mes produits et moins de gaspillage."
+            </p>
+            <div class="flex mt-4">
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+              <i class="ri-star-fill text-yellow-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-12">
+          <button class="w-3 h-3 rounded-full bg-primary mx-1"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-300 mx-1"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-300 mx-1"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-primary bg-opacity-5">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 md:p-12 text-center max-w-4xl mx-auto"
+        >
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Prêt à transformer votre exploitation agricole ?
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Rejoignez les centaines d'agriculteurs marocains qui ont déjà adopté
+            AgriSmart AI et découvrez comment notre technologie peut vous aider
+            à cultiver mieux.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors text-lg font-medium"
+            >
+              Demander une démo
+            </button>
+            <button
+              class="border border-gray-300 bg-white text-gray-700 px-8 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors text-lg font-medium"
+            >
+              Nous contacter
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <a href="#" class="font-['Pacifico'] text-white text-2xl mb-6 block"
+              >AgriSmart AI</a
+            >
+            <p class="text-gray-400 mb-6">
+              Transformons ensemble l'agriculture marocaine grâce à des
+              solutions intelligentes et durables.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Solutions</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Intelligence Artificielle</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Analyse de données</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Automatisation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Irrigation intelligente</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Monitoring des cultures</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Entreprise</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Équipe</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Carrières</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Presse</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Recevez nos dernières actualités et conseils agricoles.
+            </p>
+            <form>
+              <div class="flex mb-3">
+                <input
+                  type="email"
+                  placeholder="Votre email"
+                  class="bg-gray-800 text-white px-4 py-2 rounded-l-button w-full border-none focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap hover:bg-opacity-90 transition-colors"
+                >
+                  S'abonner
+                </button>
+              </div>
+              <label class="flex items-start">
+                <div class="flex h-5 items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none w-4 h-4 border border-gray-600 rounded checked:bg-primary checked:border-primary focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <span class="ml-2 text-xs text-gray-400"
+                  >J'accepte de recevoir des informations commerciales de la
+                  part d'AgriSmart AI.</span
+                >
+              </label>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <p class="text-gray-400 text-sm">
+                &copy; 2025 AgriSmart AI. Tous droits réservés.
+              </p>
+            </div>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Politique de confidentialité</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Conditions d'utilisation</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Mentions légales</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Checkbox custom styling
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            if (this.checked) {
+              this.classList.add("checked");
+            } else {
+              this.classList.remove("checked");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
